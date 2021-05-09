@@ -1,0 +1,102 @@
+
+8월 02, 2019 16:28:18.61 NEW SESSION
+8월 02, 2019 16:28:18.61 [7824:18216:0802/162818.608:ERROR:browser_process_sub_thread.cc(221)] Waited 127 ms for network service
+8월 02, 2019 16:28:18.84 
+8월 02, 2019 16:28:18.85 KLIB_SelfTest return : KLR_OK
+8월 02, 2019 16:31:33.18 [20180:14380:0802/163133.184:ERROR:browser_process_sub_thread.cc(221)] Waited 65 ms for network service
+8월 02, 2019 16:32:33.25 [23556:6568:0802/163233.259:ERROR:browser_process_sub_thread.cc(221)] Waited 519 ms for network service
+8월 02, 2019 16:32:33.36 
+8월 02, 2019 16:32:33.38 KLIB_SelfTest return : KLR_OK
+
+8월 04, 2019 08:47:23.80 NEW SESSION
+8월 04, 2019 08:47:23.80 [15720:11300:0804/084723.800:ERROR:browser_process_sub_thread.cc(221)] Waited 218 ms for network service
+8월 04, 2019 08:47:24.00 
+8월 04, 2019 08:47:24.01 KLIB_SelfTest return : KLR_OK
+8월 04, 2019 08:47:57.61 [20880:21636:0804/084757.618:ERROR:browser_process_sub_thread.cc(221)] Waited 65 ms for network service
+8월 04, 2019 08:47:57.74 
+8월 04, 2019 08:47:57.75 KLIB_SelfTest return : KLR_OK
+8월 04, 2019 08:48:26.53 [20752:20152:0804/084826.529:ERROR:browser_process_sub_thread.cc(221)] Waited 93 ms for network service
+8월 04, 2019 08:48:26.73 
+8월 04, 2019 08:48:26.73 KLIB_SelfTest return : KLR_OK
+8월 04, 2019 08:51:57.43 [23472:15172:0804/085157.431:ERROR:browser_process_sub_thread.cc(221)] Waited 182 ms for network service
+8월 04, 2019 08:51:57.62 
+8월 04, 2019 08:51:57.62 KLIB_SelfTest return : KLR_OK
+8월 04, 2019 08:52:43.24 [12384:4672:0804/085243.241:ERROR:browser_process_sub_thread.cc(221)] Waited 68 ms for network service
+8월 04, 2019 08:52:43.33 
+8월 04, 2019 08:52:43.34 KLIB_SelfTest return : KLR_OK
+8월 04, 2019 16:04:53.57 [10748:17112:0804/160453.578:ERROR:socket_stream.cc(219)] Closing stream with result -2
+8월 04, 2019 16:04:54.78 [10748:24528:0804/160454.676:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+8월 04, 2019 16:04:57.01 [10748:17112:0804/160457.018:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -106
+8월 04, 2019 16:04:57.21 [10748:17112:0804/160457.209:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -106
+8월 05, 2019 08:08:56.68 [10748:24528:0805/080856.681:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+8월 05, 2019 08:08:57.17 [10748:17112:0805/080856.992:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -106
+8월 05, 2019 08:09:06.13 [10748:17112:0805/080906.136:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -21
+
+8월 05, 2019 09:57:47.55 NEW SESSION
+8월 05, 2019 09:57:47.55 [24388:23308:0805/095747.546:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -106
+8월 05, 2019 09:57:47.76 [24388:23308:0805/095747.769:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -106
+8월 05, 2019 09:58:02.85 [24388:23308:0805/095802.859:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -109
+8월 05, 2019 09:58:05.29 [24388:23308:0805/095805.291:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -106
+8월 05, 2019 09:58:15.74 [24388:23308:0805/095815.746:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -102
+8월 05, 2019 09:59:07.08 [24388:23308:0805/095907.084:ERROR:socket_stream.cc(219)] Closing stream with result -2
+8월 05, 2019 09:59:39.84 [24388:23308:0805/095939.846:ERROR:browser_process_sub_thread.cc(221)] Waited 15 ms for network service
+8월 05, 2019 09:59:39.91 
+8월 05, 2019 09:59:39.92 KLIB_SelfTest return : KLR_OK
+8월 05, 2019 09:59:56.50 [2112:23620:0805/095956.502:ERROR:browser_process_sub_thread.cc(221)] Waited 73 ms for network service
+8월 05, 2019 09:59:56.63 
+8월 05, 2019 09:59:56.64 KLIB_SelfTest return : KLR_OK
+8월 05, 2019 10:00:43.38 [14512:10204:0805/100043.387:ERROR:browser_process_sub_thread.cc(221)] Waited 42 ms for network service
+8월 05, 2019 10:00:43.55 
+8월 05, 2019 10:00:43.55 KLIB_SelfTest return : KLR_OK
+8월 05, 2019 10:02:16.49 [20168:2692:0805/100216.497:ERROR:browser_process_sub_thread.cc(221)] Waited 93 ms for network service
+8월 05, 2019 10:02:16.76 
+8월 05, 2019 10:02:16.77 KLIB_SelfTest return : KLR_OK
+8월 05, 2019 10:03:53.41 [17984:12060:0805/100353.418:ERROR:browser_process_sub_thread.cc(221)] Waited 43 ms for network service
+8월 05, 2019 10:03:53.63 
+8월 05, 2019 10:03:53.64 KLIB_SelfTest return : KLR_OK
+8월 05, 2019 10:06:56.23 [20432:17628:0805/100656.230:ERROR:browser_process_sub_thread.cc(221)] Waited 18 ms for network service
+8월 05, 2019 10:06:56.55 
+8월 05, 2019 10:06:56.56 KLIB_SelfTest return : KLR_OK
+8월 05, 2019 10:07:46.13 [17896:16292:0805/100746.135:ERROR:browser_process_sub_thread.cc(221)] Waited 343 ms for network service
+8월 05, 2019 10:07:46.40 
+8월 05, 2019 10:07:46.41 KLIB_SelfTest return : KLR_OK
+
+8월 07, 2019 10:21:59.12 NEW SESSION
+8월 07, 2019 10:21:59.13 [6888:16532:0807/102159.121:ERROR:textfield.cc(1758)] NOT IMPLEMENTED
+8월 07, 2019 10:22:12.94 [6888:16532:0807/102212.946:ERROR:CONSOLE(279)] "Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://www.google.com') does not match the recipient window's origin ('chrome-search://local-ntp').", source: chrome-search://most-visited/single.js (279)
+8월 07, 2019 12:40:24.60 [6888:16532:0807/124024.607:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+8월 07, 2019 12:53:00.08 [6888:9716:0807/125300.084:ERROR:socket_stream.cc(219)] Closing stream with result -2
+8월 07, 2019 13:25:10.11 [6888:9716:0807/132510.115:ERROR:browser_process_sub_thread.cc(221)] Waited 21 ms for network service
+8월 07, 2019 13:25:10.38 
+8월 07, 2019 13:25:10.39 KLIB_SelfTest return : KLR_OK
+8월 07, 2019 13:52:06.01 [17524:21108:0807/135206.014:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+8월 07, 2019 13:54:25.64 [17524:13376:0807/135425.647:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -106
+8월 07, 2019 14:04:22.17 [17524:13376:0807/140422.174:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -21
+8월 07, 2019 14:04:29.73 [17524:13376:0807/140429.738:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -21
+8월 07, 2019 14:32:02.21 [17524:13376:0807/143202.211:ERROR:browser_process_sub_thread.cc(221)] Waited 36 ms for network service
+8월 07, 2019 14:32:02.46 
+8월 07, 2019 14:32:02.47 KLIB_SelfTest return : KLR_OK
+
+8월 07, 2019 14:42:37.28 NEW SESSION
+8월 07, 2019 14:42:37.28 [1312:6076:0807/144237.282:ERROR:browser_process_sub_thread.cc(221)] Waited 58 ms for network service
+8월 07, 2019 14:42:37.39 
+8월 07, 2019 14:42:37.40 KLIB_SelfTest return : KLR_OK
+
+8월 08, 2019 09:35:57.24 NEW SESSION
+8월 08, 2019 09:35:57.24 [15684:13568:0808/093557.237:ERROR:browser_process_sub_thread.cc(221)] Waited 28 ms for network service
+8월 08, 2019 09:35:57.30 
+8월 08, 2019 09:35:57.31 KLIB_SelfTest return : KLR_OK
+8월 08, 2019 09:41:24.47 [13792:12796:0808/094124.470:ERROR:browser_process_sub_thread.cc(221)] Waited 37 ms for network service
+8월 08, 2019 09:41:24.54 
+8월 08, 2019 09:41:24.55 KLIB_SelfTest return : KLR_OK
+8월 08, 2019 09:45:58.52 [22080:18092:0808/094558.524:ERROR:browser_process_sub_thread.cc(221)] Waited 50 ms for network service
+8월 08, 2019 09:45:58.84 
+8월 08, 2019 09:45:58.85 KLIB_SelfTest return : KLR_OK
+8월 08, 2019 11:14:03.29 [25036:20484:0808/111403.296:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -106
+8월 08, 2019 11:14:32.86 [25036:20484:0808/111432.861:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -102
+8월 08, 2019 11:15:02.92 [25036:20484:0808/111502.925:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -106
+8월 08, 2019 11:15:16.58 [25036:20484:0808/111516.588:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -102
+8월 08, 2019 11:17:01.74 [25036:20484:0808/111701.742:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -102
+8월 08, 2019 14:25:09.39 [25036:20484:0808/142509.398:ERROR:browser_process_sub_thread.cc(221)] Waited 312 ms for network service
+8월 08, 2019 14:25:10.69 
+8월 08, 2019 14:25:10.69 KLIB_SelfTest return : KLR_OK

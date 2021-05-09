@@ -1,0 +1,10 @@
+package kr.co.mlec.login.emailhandler;
+
+import java.util.Random;
+
+//인증키를 생성
+public class TempKey {
+	private int num;
+
+
+}

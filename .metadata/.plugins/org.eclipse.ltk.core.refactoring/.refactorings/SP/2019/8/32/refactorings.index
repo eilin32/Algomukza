@@ -1,0 +1,53 @@
+1564878116455	Move folders
+1564966766235	Rename resource 'index.jsp'
+1564966772702	Rename resource 'index.hyml'
+1564966813791	Rename resource 'index.html'
+1564966884606	Delete element
+1564967005802	Copy folder
+1564967009185	Copy folder
+1564967013832	Delete elements
+1564967203904	Rename resource 'index.jsp'
+1564967251423	Delete element
+1564968178547	Rename resource 'index.html'
+1564968331780	Copy folders
+1564968335597	Delete elements
+1564980947131	Delete element
+1564981414415	Rename package 'kr.co.mlec.baord.service'
+1564982331859	Rename package 'kr.co.mlec.board.controller'
+1564982338000	Rename package 'kr.co.mlec.board.dao'
+1564982343622	Rename package 'kr.co.mlec.board.vo'
+1564982349733	Rename package 'kr.co.mlec.board.service'
+1564982620368	Rename type 'BoardController'
+1564982628447	Rename type 'BoardDAO'
+1564982643390	Rename type 'BoardDAOInter'
+1564982647621	Rename type 'BoardService'
+1564982651458	Rename type 'BoardServiceInter'
+1564982658576	Rename compilation unit 'BoardVO.java'
+1564983083743	Delete element
+1564986672733	Delete element
+1564988639961	Delete element
+1564990022550	Rename resource 'freeBoard.jsp'
+1564990393224	Rename resource 'freebardtable.css'
+1564991009785	Copy files
+1564991013072	Delete elements
+1564991084694	Move file
+1564991128744	Delete element
+1564991185129	Move files
+1564991189520	Move file
+1564991201668	Delete element
+1564991207509	Rename resource 'generic.html'
+1564991243309	Delete element
+1564991360477	Delete element
+1564991663070	Rename resource 'freeboardlist.jsp'
+1564992120214	Delete element
+1564993260108	Delete element
+1564993262963	Delete element
+1565055925884	Rename package 'kr.co.mlec.logincontroller'
+1565223974923	Delete element
+1565240849686	Copy folder
+1565240915410	Delete element
+1565240921472	Delete element
+1565312119764	Rename type 'Email'
+1565312377880	Rename compilation unit 'EmailHandler.java'
+1565313562036	Delete element
+1565315154090	Rename package 'kr.co.mlec.login.emailhandler'

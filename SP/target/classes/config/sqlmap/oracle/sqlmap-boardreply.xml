@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board.dao.BoardReplyDAO">
+	<resultMap id="boardReplyMap" type="boardReplyVO">
+		<result property="reno" column="r_no" />
+		<result property="repno" column="r_pno" />
+		<result property="bno" column="b_no" />
+		<result property="rewriter" column="r_writer" />
+		<result property="recontent" column="r_content" />
+		<result property="reregdate" column="r_regdate" />
+		<result property="reorder" column="r_order" />
+		<result property="redepth" column="r_depth" />
+		<result property="redeleted" column="r_deleted"/>
+	</resultMap>
+	
+	<!-- 게시글 댓글 불러오기 -->
+	<select id="selectReplyByNo" resultMap="boardReplyMap"
+		parameterType="int">
+		select *
+		from t_boardreply
+		where b_no = #{bno}
+		order by r_order
+	</select>
+
+	<!-- 게시글 댓글 삽입 -->
+	<insert id="insertReply" parameterType="boardReplyVO">
+		<selectKey resultType="int" keyProperty="reno"
+			order="BEFORE">
+			select nvl(max(r_no),0)+1 
+			from t_boardreply
+		</selectKey>
+
+		insert into t_boardreply(b_no, r_no, r_writer, r_content, r_order, r_pno, r_depth, r_deleted)
+		values (#{bno}, #{reno}, #{rewriter}, #{recontent}, #{reorder},
+			<choose>
+				<when test="repno == null"> #{reno}, 0</when>
+				<otherwise>#{repno}, #{redepth} </otherwise>
+			</choose>
+			,'N'
+		)
+	</insert>
+	
+	<!-- 부모 댓글 정보 가져오기 -->
+	<select id="selectByRepno" resultMap="boardReplyMap" parameterType="int">
+		select b_no, r_depth, r_order
+		from t_boardreply
+		where r_no=#{repno}
+	</select>
+	
+	<!-- 게시물 댓글 최대 순서 다음숫자 구하기 -->
+	<select id="replyMaxOrder" resultType="int" parameterType="int">
+		select nvl(max(r_order),0)+1
+		from t_boardreply
+		where b_no =#{bno}
+	</select>
+	
+	<!-- 새 댓글 삽입시 나머지 댓글 순서 재조정 -->
+	<update id="updateReplyOrder" parameterType="boardReplyVO">
+		update t_boardreply
+		set r_order = r_order+1
+		where b_no =#{bno} and r_order>#{reorder}
+	</update>
+	
+	<!-- 자식이 있을 경우 부모댓글 삭제처리 -->
+	<update id="updateReplyDelete" parameterType="int">
+		update t_boardreply
+		set r_deleted = 'Y'
+		where r_no=#{reno}
+	</update>
+	
+	<!-- 자식이 없을 경우 댓글 아예 삭제 -->
+	<delete id="deleteReply" parameterType="int">
+		delete from t_boardreply
+		where r_no=#{reno}
+	</delete>
+	
+	<!-- 게시글 삭제될 때 해당 댓글도 모두 삭제하기 -->
+	<delete id="deleteReplyAll" parameterType="int">
+		delete from t_boardreply
+		where b_no=#{no}
+	</delete>
+	<!-- 자식  댓글 수 구하기 -->
+	<select id="countReplyChild" resultType="int" parameterType="int">
+		select count(*)
+		from t_boardreply
+		where r_pno = #{reno} and r_no != #{reno} and r_deleted='N'
+	</select>
+	
+	<!-- 댓글 수정하기 -->
+	<update id="updateReply">
+		
+	</update>
+</mapper>

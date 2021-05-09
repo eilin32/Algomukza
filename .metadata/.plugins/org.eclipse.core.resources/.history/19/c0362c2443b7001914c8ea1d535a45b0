@@ -1,0 +1,9 @@
+package kr.co.mlec.freeboard.dao;
+
+import java.util.List;
+
+import kr.co.mlec.freeboard.vo.BoardVO;
+
+public interface FreeBoardDAO {
+	public List<BoardVO> selectAll();
+}

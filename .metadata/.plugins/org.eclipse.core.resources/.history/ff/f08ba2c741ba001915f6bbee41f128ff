@@ -1,0 +1,14 @@
+package kr.co.mlec.email.dao;
+
+import kr.co.mlec.member.vo.MemberVO;
+
+public class EmailDAOInter implements EmailDAO{
+
+	@Override
+	public MemberVO searchId(MemberVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

@@ -1,0 +1,13 @@
+package kr.co.mlec.member.vo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class MemberVO {
+	private String email;
+	private String name;
+	private String pwd;
+	private String old;
+	private String preg;
+	private String age;
+}

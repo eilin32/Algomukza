@@ -1,0 +1,10 @@
+package kr.co.mlec.board.vo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class BoardVO {	
+	private int no; // 게시판 번호
+	private String id; //사용자 id 
+	private int viewCnt; //게시판 조회수
+}

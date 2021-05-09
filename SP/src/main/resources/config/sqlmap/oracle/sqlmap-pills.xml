@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board.dao.PillsDAO">
+	<resultMap type="mypillsVO" id="mypillsMap">
+		<result property="uId" column="u_id" />
+		<result property="pNum" column="p_num"/>
+		<result property="pName" column="p_name" />
+		<result property="pCom" column="p_com" />
+		<result property="pCnt" column="p_cnt" />
+		<result property="pPer" column="p_per" />
+		<result property="pTnum" column="p_tnum" />
+	</resultMap>
+
+	<insert id="addmypills" parameterType="mypillsVO">
+		<selectKey resultType="int" keyProperty="pNum"
+			order="BEFORE">
+			select nvl(max(p_num),0)+1
+			from t_upills
+		</selectKey>
+		insert into t_upills
+		values (#{pNum},#{uId},#{pName},#{pCom},#{pCnt}, #{pPer},#{pTnum})
+	</insert>
+
+	<select id="mypillsAlllist" resultMap="mypillsMap"
+		parameterType="String">
+		select *
+		from t_upills
+		where u_id=#{id}
+	</select>
+	
+	<delete id="deletemypill" parameterType="int">
+		delete from t_upills
+		where p_num=#{pNum}
+	</delete>
+</mapper>

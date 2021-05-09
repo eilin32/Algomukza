@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member.dao.memberDAO">
+
+	<insert id="addMember" parameterType="memberVO">
+		insert into t_user(id, pwd, name, email, phone, chk
+		<if test="thum!=null">
+			,
+			thum
+		</if>
+		)
+		values(
+		#{id},
+		#{pwd},
+		#{name},
+		#{email},
+		#{phone},
+		#{chk}
+		<if test="thum!=null">
+			,
+			#{thum, jdbcType=VARCHAR}
+		</if>
+		)
+	</insert>
+
+	<update id="updateMyinfo" parameterType="memberVO">
+		update t_user set name=#{name}, email=#{email}, phone=#{phone}, chk=#{chk}
+		where id=#{id}
+	</update>
+
+	<select id="searchId" parameterType="String" resultType="int">
+		select count(id) as id from t_user where id=#{id}
+	</select>
+
+	<select id="searchPwd" parameterType="hashmap" resultType="int">
+		select count(pwd) as pwd from t_user where id=#{id} and pwd=#{pwd}
+	</select>
+	<select id="login" parameterType="memberVO"
+		resultType="memberVO">
+		select * from t_user where id=#{id} and pwd = #{pwd}
+	</select>
+
+	<update id="authkey" parameterType="memberVO">
+		update t_user set authkey = #{authkey} where id=#{id}
+	</update>
+
+	<!-- 비밀번호 변경하기 -->
+	<update id="updatePwd" parameterType="hashmap">
+	 	update t_user set pwd = #{npwd} where id=#{id}
+	</update>
+	
+	
+</mapper>

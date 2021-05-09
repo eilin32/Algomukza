@@ -1,0 +1,22 @@
+package kr.co.mlec.email.dao;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import kr.co.mlec.member.vo.MemberVO;
+
+@Repository
+public class EmailDAOInter implements EmailDAO{
+	
+	@Autowired
+	private SqlSessionTemplate session;
+	
+	@Override
+	public MemberVO searchId(MemberVO vo) {
+		MemberVO result = session.selectOne("eamil.dao.eamilDAO.searchId",vo);
+		return result;
+	}
+
+	
+}

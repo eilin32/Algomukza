@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member.dao.memberDAO">
+  id varchar2(15) primary key,
+pwd varchar2(30) not null,
+name varchar2(5) not null,
+email varchar2(30) not null, 
+phone varchar2(11),
+chk varchar2(2) ,
+thum varchar2(150)
+);
+  
+  <insert id="addMember" parameterType="memberVO">
+   	insert into t_user(id, pwd, pwd, old, preg, age) 
+   	values(
+   	#{email},
+   	#{name},
+   	#{pwd},
+   	#{old,jdbcType=VARCHAR},
+   	#{preg,jdbcType=VARCHAR}, 
+   	#{age,jdbcType=VARCHAR}
+   	 )
+  </insert>  
+  
+  <select id="searchId" parameterType="String" resultType="int">
+  	select count(id) as id from t_user where id=#{id}
+  </select>
+  
+  <select id="login" parameterType="memberVO" resultType="memberVO">
+  	select email,name,pwd,old,preg,age from t_user where id=#{id} and pwd = #{pwd}
+  </select>
+  
+  
+
+</mapper>

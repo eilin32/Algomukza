@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board.dao.FreeBoardDAO">
+<resultMap type="fBoard" id="fBoardMap">
+	<result column="view_Cnt" property="viewCnt"/>
+</resultMap>
+
+<select id="selectAll" resultMap="fBoardMap"">
+	select no,id,view_Cnt,title,writeDate, from FreeBoard
+</select>
+
+</mapper>

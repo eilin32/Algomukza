@@ -1,0 +1,16 @@
+package kr.co.mlec.login.dao;
+
+import org.springframework.stereotype.Repository;
+
+import kr.co.mlec.member.vo.MemberVO;
+
+@Repository
+public class LoginDAOInter implements LoginDAO {
+
+	@Override
+	public void addmember(MemberVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

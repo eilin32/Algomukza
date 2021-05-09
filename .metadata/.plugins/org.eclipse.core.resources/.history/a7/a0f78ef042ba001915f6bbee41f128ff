@@ -1,0 +1,21 @@
+package kr.co.mlec.email.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import kr.co.mlec.email.dao.EmailDAO;
+import kr.co.mlec.login.dao.LoginDAO;
+import kr.co.mlec.login.service.LoginService;
+import kr.co.mlec.member.vo.MemberVO;
+@Service
+public class EmailServiceInter implements EmailService {
+	
+	@Autowired
+	private EmailDAO dao;
+	@Override
+	public MemberVO searchId(MemberVO vo) {
+		dao.searchId(vo);
+		return null;
+	}
+	
+}

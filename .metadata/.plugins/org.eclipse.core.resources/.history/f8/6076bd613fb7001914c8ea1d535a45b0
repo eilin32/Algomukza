@@ -1,0 +1,29 @@
+package kr.co.mlec.board.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import kr.co.mlec.board.service.BoardService;
+import kr.co.mlec.board.vo.BoardVO;
+
+@Controller
+public class BoardController {
+	@Autowired
+	BoardService service;
+		
+	
+	@RequestMapping("/board")
+	public String selectAll() {
+		List<BoardVO> vo=service.selectAll();
+		
+		for(BoardVO v: vo) {
+		System.out.println(v);
+		}
+		
+		return "success";
+	}
+}

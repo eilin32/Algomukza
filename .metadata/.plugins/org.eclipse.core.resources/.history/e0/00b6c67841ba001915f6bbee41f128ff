@@ -1,0 +1,5 @@
+package kr.co.mlec.email.service;
+
+public interface EmailService {
+	public 
+}

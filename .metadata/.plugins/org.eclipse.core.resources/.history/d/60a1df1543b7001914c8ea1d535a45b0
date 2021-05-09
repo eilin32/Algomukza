@@ -1,0 +1,23 @@
+package kr.co.mlec.freeboard.dao;
+
+import java.util.List;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import kr.co.mlec.freeboard.vo.FreeBoardVO;
+
+@Repository
+public class FreeBoardDAOInter implements FreeBoardDAO{
+	
+	@Autowired
+	SqlSessionTemplate session;
+	public List<FreeBoardVO> selectAll(){
+	List<FreeBoardVO> vo = session.selectList("board.dao.BoardDAO.selectAll");
+	
+	return vo;
+		
+	}
+	
+}

@@ -1,0 +1,17 @@
+package kr.co.mlec.email.dao;
+
+import org.springframework.stereotype.Repository;
+
+import kr.co.mlec.member.vo.MemberVO;
+
+@Repository
+public class EmailDAOInter implements EmailDAO{
+
+	@Override
+	public MemberVO searchId(MemberVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

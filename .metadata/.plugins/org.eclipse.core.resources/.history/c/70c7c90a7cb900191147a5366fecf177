@@ -1,0 +1,112 @@
+package kr.co.mlec.member.vo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class MemberVO {
+   private String id;
+   private String pwd;
+   private String name;
+   private String email;
+   private String phone;
+   private String chk;
+   private String thum;
+   
+   
+   public MemberVO() {
+      super();
+      // TODO Auto-generated constructor stub
+   }
+
+
+   public MemberVO(String id, String pwd, String name, String email, String phone, String chk, String thum) {
+      super();
+      this.id = id;
+      this.pwd = pwd;
+      this.name = name;
+      this.email = email;
+      this.phone = phone;
+      this.chk = chk;
+      this.thum = thum;
+   }
+
+
+   public String getId() {
+      return id;
+   }
+
+
+   public void setId(String id) {
+      this.id = id;
+   }
+
+
+   public String getPwd() {
+      return pwd;
+   }
+
+
+   public void setPwd(String pwd) {
+      this.pwd = pwd;
+   }
+
+
+   public String getName() {
+      return name;
+   }
+
+
+   public void setName(String name) {
+      this.name = name;
+   }
+
+
+   public String getEmail() {
+      return email;
+   }
+
+
+   public void setEmail(String email) {
+      this.email = email;
+   }
+
+
+   public String getPhone() {
+      return phone;
+   }
+
+
+   public void setPhone(String phone) {
+      this.phone = phone;
+   }
+
+
+   public String getChk() {
+      return chk;
+   }
+
+
+   public void setChk(String chk) {
+      this.chk = chk;
+   }
+
+
+   public String getThum() {
+      return thum;
+   }
+
+
+   public void setThum(String thum) {
+      this.thum = thum;
+   }
+
+
+   @Override
+   public String toString() {
+      return "MemberVO [id=" + id + ", pwd=" + pwd + ", name=" + name + ", email=" + email + ", phone=" + phone
+            + ", chk=" + chk + ", thum=" + thum + "]";
+   }
+   
+   
+   
+}

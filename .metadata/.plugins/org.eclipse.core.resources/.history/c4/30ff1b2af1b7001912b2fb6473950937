@@ -1,0 +1,9 @@
+package kr.co.mlec;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={"classpath:config/**/*.xml"})
+public class memberTest {
+
+	
+
+}

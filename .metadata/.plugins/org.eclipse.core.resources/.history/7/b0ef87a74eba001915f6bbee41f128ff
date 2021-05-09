@@ -1,0 +1,78 @@
+package kr.co.mlec.email.controller;
+
+import java.util.Collection;
+import java.util.Map;
+import java.util.logging.Logger;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.servlet.ModelAndView;
+
+import kr.co.mlec.email.service.EmailService;
+import kr.co.mlec.emailhandler.EmailSender;
+import kr.co.mlec.emailhandler.EmailVO;
+import kr.co.mlec.member.vo.MemberVO;
+
+@Controller
+public class EmailController {
+	@Autowired
+	private EmailService service;
+	
+	@Autowired
+	private EmailVO email;
+	
+	@Autowired
+	private EmailSender emailSender;
+
+	
+	@RequestMapping(value = "/searchId", method = RequestMethod.GET)
+	public String gotoSearchId() {
+		System.out.println("SearchID GET");
+		return "login/searchId";
+	}
+	
+
+	@RequestMapping(value = "/searchId", method = RequestMethod.POST)
+	public String searchId(@ModelAttribute MemberVO vo , Model model) throws Exception {
+		System.out.println("SearchID POST 데이터베이스 이전");
+		System.out.println(vo);
+		MemberVO result = service.searchId(vo);
+		
+		System.out.println("SearchID POST 데이터베이스 이후");
+
+		if(result!=null) {
+			email.setSubject(result.getName()+"님 아이디 찾기 메일입니다.");
+			email.setReceiver(result.getEmail());
+			email.setContent(result.getName()+"님의 아이디는 :" + result.getId() + "입니다.");
+			emailSender.SendEmail(email);
+			return "redirect:/login";
+		}else {
+			model.addAttribute("searchId", "입력하신 정보로 가입된 ID는 없습니다.");
+			System.out.println("입력된 정보가 없다");
+			return "login/searchId";
+		}
+	}
+	
+	
+	@RequestMapping(value = "/searchPwd", method = RequestMethod.GET)
+	public String gotoSearchPwd() {
+		return "login/searchPwd";
+	}
+	
+	
+	@RequestMapping(value = "/searchPwd", method = RequestMethod.POST)
+	public String searchPwd(@ModelAttribute MemberVO vo, Model model) {
+		System.out.println(vo);
+		MemberVO result=service.searchPwd(vo);
+		
+		
+		return null;
+	}
+}
+
+

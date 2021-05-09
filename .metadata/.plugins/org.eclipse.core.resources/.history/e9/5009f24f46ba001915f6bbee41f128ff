@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:tx="http://www.springframework.org/schema/tx"
+ xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+    <!-- 데이터베이스 연결 -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:xe" />
+        <property name="username" value="o0xvx0o5"/>
+        <property name="password" value="test00"/>
+    </bean>
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+
+  <!--        MyBatis 설정 파일의 위치를 지정합니다.  -->
+        <property name="configLocation" value="classpath:config/mybatis/sqlMapConfig.xml" /> 
+
+<!--       SQL 파일의 위치를 지정합니다.  -->
+        <property name="mapperLocations" value="classpath:config/sqlmap/oracle/*.xml" /> 
+    </bean>
+
+    
+     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
+        <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
+    </bean>
+
+
+<bean id="mailSender" class ="org.springframework.mail.javamail.JavaMailSenderImpl" >
+        <property name="host" value="smtp.gmail.com" />
+        <property name="port" value="587" />
+        <property name="defaultEncoding" value="utf-8"/>
+        <property name="username" value="your id@gmail.com" />
+        <property name="password" value="your password" />
+       
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtp.starttls.enable">true</prop>
+                <prop key="mail.smtp.auth">true</prop>
+               
+               
+            </props>
+        </property>
+       
+    </bean>
+    <bean id="email" class="spring.board.email.Email">
+    </bean>
+    <bean id="emailSender" class="spring.board.email.EmailSender">
+    </bean>
+
+
+출처: https://answerofgod.tistory.com/entry/SPRING-EMAIL-보내기-기능비번찾기메일 [The Answer's Engineering Blog]
+	
+</beans>

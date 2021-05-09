@@ -1,0 +1,16 @@
+package kr.co.mlec.email.service;
+
+import kr.co.mlec.login.dao.LoginDAO;
+import kr.co.mlec.login.service.LoginService;
+import kr.co.mlec.member.vo.MemberVO;
+
+public class EmailServiceInter implements EmailService {
+	
+	LoginDAO dao;
+	@Override
+	public MemberVO searchId(MemberVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

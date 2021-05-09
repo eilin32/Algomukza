@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<header>
+		<jsp:include page="/WEB-INF/views/include/setting.jsp" />
+	</header>
+</head>
+<body>
+	<header>
+		<jsp:include page="/WEB-INF/views/include/top.jsp" />
+	</header>
+	<br><br><br><br><br><br>
+	<h1>프리드보게시판</h1>
+	<h1>tqtqqtqqt</h1>
+
+
+
+
+<footer>
+	<footer>
+		<jsp:include page="/WEB-INF/views/include/footer.jsp" />
+	</footer>
+</footer>
+</body>
+</html>

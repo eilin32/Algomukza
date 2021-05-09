@@ -1,0 +1,47 @@
+package kr.co.mlec.board.vo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class BoardVO {	
+	private int no;
+	private String name;
+	private String pwd;
+	
+	
+	
+	@Override
+	public String toString() {
+		return "BoardVO [no=" + no + ", name=" + name + ", pwd=" + pwd + "]";
+	}
+	public BoardVO() {
+		super();
+	}
+	public BoardVO(int no, String name, String pwd) {
+	
+		this.no = no;
+		this.name = name;
+		this.pwd = pwd;
+	}
+	public int getNo() {
+		return no;
+	}
+	public void setNo(int no) {
+		this.no = no;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPwd() {
+		return pwd;
+	}
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+
+
+
+}

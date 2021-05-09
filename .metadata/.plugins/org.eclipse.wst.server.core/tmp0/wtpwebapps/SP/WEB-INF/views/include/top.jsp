@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>	
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+ 		<!-- Header -->
+			<header id="header">
+				<nav class="left">
+					<a href="#menu"><span>Menu</span></a>
+				</nav>
+				<a href="${pageContext.request.contextPath}/" class="logo">intensify</a>
+				<nav class="right">
+					
+				   <c:choose>
+						<c:when test="${empty loginSucessVO}">
+						<a href="${pageContext.request.contextPath }/login" class="button alt">Log in</a>
+						</c:when>
+						<c:otherwise>
+							<img src="C:\\Users\\sjm\\Desktop\\SP\\SP\\src\\main\\webapp\\resources\\assets\\profileImg\\${loginSucessVO.thum}">						
+							${loginSucessVO.id } 님으로 로그인
+							<a href="${pageContext.request.contextPath}/logout" class="button alt">Log Out</a>
+						</c:otherwise>
+					</c:choose>
+
+					<c:if test="${empty loginSucessVO}">			
+					<a href="${pageContext.request.contextPath }/signup" class="button alt">Sign Up</a>
+ 					</c:if>
+ 				</nav>
+			</header>
+
+	
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="${pageContext.request.contextPath}/">Home</a></li>
+					<li><a href="${pageContext.request.contextPath}/board">자유게시판</a></li>
+					<li><a href="${pageContext.request.contextPath}/errorBoard">부작용게시판</a></li>
+					
+					<c:if test="${not empty loginSucessVO}">
+					<li><a href="${pageContext.request.contextPath}/mypage">마이페이지</a></li>
+					</c:if>
+				</ul>
+				<ul class="actions vertical">
+					<li><a href="#" class="button fit">Login</a></li>
+				</ul>
+			</nav>

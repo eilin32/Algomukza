@@ -1,0 +1,13 @@
+package kr.co.mlec.board.vo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class BoardVO {	
+	private int no;
+	private String name;
+	private String pwd;
+
+
+
+}

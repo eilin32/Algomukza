@@ -1,0 +1,10 @@
+package kr.co.mlec.login.service;
+
+import kr.co.mlec.member.vo.MemberVO;
+
+public interface LoginService {
+	public void addMember(MemberVO vo);
+	public int searchId(String id);
+	public int searchName(String name);
+	public MemberVO login(MemberVO vo);
+}

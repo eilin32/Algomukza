@@ -1,0 +1,12 @@
+package kr.co.mlec.login.dao;
+
+import org.springframework.web.multipart.MultipartFile;
+
+import kr.co.mlec.member.vo.MemberVO;
+
+public interface LoginDAO {
+	public void addmember(MemberVO vo, MultipartFile file);
+	public int searchId(String id);
+	public int searchName(String name);
+	public MemberVO login(MemberVO vo);
+}

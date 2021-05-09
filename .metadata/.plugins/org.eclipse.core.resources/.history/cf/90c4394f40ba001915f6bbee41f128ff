@@ -1,0 +1,5 @@
+package kr.co.mlec.login.emailhandler;
+
+public class Email {
+
+}

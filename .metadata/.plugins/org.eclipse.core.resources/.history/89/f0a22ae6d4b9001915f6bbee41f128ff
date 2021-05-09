@@ -1,0 +1,6 @@
+package kr.co.mlec.login.emailhandler;
+//인증키를 생성
+public class TempKey {
+	private boolean lowerCheck;
+	private int size;
+}
